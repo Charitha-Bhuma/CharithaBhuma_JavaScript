@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Epam</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="epamCSS.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+function validate() {
+	var email = document.forms["myform"]["email"].value;
+	if(email==""){
+		alert("Please enter the email");
+		return false;
+	}else{
+		var exp = /^(?:[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/;
+		var x=exp.test(email);
+		if(x){
+		}else{
+			alert("Email id not in correct format");
+		return false;
+		} 
+	} 
+	var password = document.forms["myform"]["password"].value;
+	if(password.length < 8 || password.length > 20) {
+	alert("Invalid password, length of password must be ");
+	}
+	var mobile = document.forms["myform"]["mobile"].value;
+	if(mobile==""){
+		alert("Please enter the mobile");
+		return false;
+	}else{
+		if(mobile.length != 10) {
+		alert("Mobile number must be of 10 digits");
+		return false;
+	}
+	if(isNaN(mobile)){
+	alert("Mobile number not valid");
+	return false;
+	}
+ } 
+
+}
+</script>
+</head>
+<body>
+<center>
+	<form name="myform" action="#" onsubmit="return validate()" method="post">
+	<div id = "box">
+		<div class="header">
+ 			<b>Sign in <p style = "color: white; font-size: 20px" class="alignright">X</p></b>
+		</div>
+		<br><br>
+		<input style = "width : 260px; height : 35px; font-size: 15px;"  type="text" name="email" placeholder="mail@example.com"><br><br>
+		<input style = "width : 260px; height : 35px; font-size:15px"  type="password" name="password" placeholder="password"><br><br>
+		<input style = "width : 260px; height : 35px; font-size: 15px;"  type="text" name="mobile" placeholder="mobile number"><br><br>
+		
+		<br>
+		
+		
+		<input class = "button" type = "submit" value = "SIGN IN">
+		
+	</form>
+		<br><br>
+		<div id="textbox">
+		<p class="alignleft">Forgot your password?</p>
+		<p class="alignright">Register!</p>
+		</div>
+		<br><br>
+			<h2><span>OR</span></h2>
+		
+			<br><br>
+			<input class = "fbutton" type = "submit" value = "f"><br><br>
+		<input class = "gbutton" type = "submit" value = "g"></button><br><br><br>
+		
+	</div>
+</center>
+</body>
+</html>
